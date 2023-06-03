@@ -4,7 +4,7 @@ async function postData() {
   const feed = await fetch(`${process.env.API_URL}/api`, {
     method: "POST",
     body: JSON.stringify({ name: "John Doe" }),
-  }).then((res) => res.json());
+  }).then((res) => res.text());
 
   console.log(feed);
   return {
