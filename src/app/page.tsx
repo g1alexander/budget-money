@@ -3,9 +3,11 @@ import styles from "./page.module.css";
 import Hola from "@/Hola";
 
 async function getData() {
-  const feed = await fetch(`${process.env.API_URL}/api`).then((res) =>
-    res.json()
-  );
+  // const feed = await fetch(`${process.env.API_URL}/api`).then((res) =>
+  //   res.json()
+  // );
+
+  const feed = "";
 
   return {
     feed,
