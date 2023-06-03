@@ -3,7 +3,9 @@ import styles from "./page.module.css";
 import Hola from "@/Hola";
 
 async function getData() {
-  const feed = await fetch(`/api`).then((res) => res.json());
+  const feed = await fetch(`${process.env.API_URL}/api`).then((res) =>
+    res.json()
+  );
 
   return {
     feed,
@@ -18,6 +20,7 @@ export default async function Home() {
       <div className={styles.description}>
         <p>
           {JSON.stringify(feed)}
+          {JSON.stringify(process.env.API_URL)}
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
         </p>
