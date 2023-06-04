@@ -7,10 +7,14 @@ export default defineConfig({
   plugins: [react()],
   test: {
     environment: "jsdom",
+    coverage: {
+      reporter: ["text", "json", "html"],
+      provider: "c8",
+    },
     exclude: [
       ...configDefaults.exclude,
       "packages/template/*",
-      "test/e2e/**/*.ts",
+      "tests/e2e/**/*.ts",
     ],
     alias: {
       "@": path.resolve(__dirname, "./src"),
