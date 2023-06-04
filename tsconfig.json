@@ -27,7 +27,7 @@
   "exclude": [
     "node_modules",
     "src/**/__tests__/*",
-    "test/unit/**/*.ts",
-    "test/e2e/**/*.ts"
+    "tests/unit/**/*.ts",
+    "tests/e2e/**/*.ts"
   ]
 }
