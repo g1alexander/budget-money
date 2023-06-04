@@ -1,5 +1,8 @@
 "use client";
 
+import { Button } from "@mui/material";
+import SendIcon from "@mui/icons-material/Send";
+
 async function postData() {
   // const feed = await fetch(`${process.env.API_URL ?? ""}/api`, {
   //   method: "POST",
@@ -17,5 +20,9 @@ export default function Hola() {
 
     await postData();
   };
-  return <button onClick={hola}>hjoasdkas</button>;
+  return (
+    <Button onClick={hola} variant="contained" endIcon={<SendIcon />}>
+      Send
+    </Button>
+  );
 }
