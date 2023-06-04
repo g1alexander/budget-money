@@ -1,6 +1,5 @@
 import Image from "next/image";
-import styles from "./page.module.css";
-import Hola from "@/Hola";
+import ButtonHome from "@/modules/home/components/ButtonHome";
 
 async function getData() {
   // const feed = await fetch(`${process.env.API_URL}/api`).then((res) =>
@@ -18,16 +17,16 @@ export default async function Home() {
   const { feed } = await getData();
 
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
+    <main>
+      <div>
         <p>
           {JSON.stringify(feed)}
           {JSON.stringify(process.env.API_URL)}
           Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
+          <code>src/app/page.tsx</code>
         </p>
 
-        <Hola />
+        <ButtonHome />
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -38,7 +37,6 @@ export default async function Home() {
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
-              className={styles.vercelLogo}
               width={100}
               height={24}
               priority
@@ -47,9 +45,8 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className={styles.center}>
+      <div>
         <Image
-          className={styles.logo}
           src="/next.svg"
           alt="Next.js Logo"
           width={180}
@@ -58,10 +55,9 @@ export default async function Home() {
         />
       </div>
 
-      <div className={styles.grid}>
+      <div>
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -73,7 +69,6 @@ export default async function Home() {
 
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -85,7 +80,6 @@ export default async function Home() {
 
         <a
           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -97,7 +91,6 @@ export default async function Home() {
 
         <a
           href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
