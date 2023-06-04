@@ -28,7 +28,6 @@
     "node_modules",
     "src/**/__tests__/*",
     "test/unit/**/*.ts",
-    "**/*.worker.ts",
     "test/e2e/**/*.ts"
   ]
 }
